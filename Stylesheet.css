@@ -5,7 +5,9 @@
 
 :root {
     --navbar:       #2D2D2D;
+    --navbar-logo:  #1D1D1D;
     --navbar-hover: #1D1D1D;
+    --navbar-active:#1D1D1D;
     --text:         #FFFFFF;
 }
 
@@ -42,5 +44,9 @@ nav {
 .headerTitle {
     font-weight: bold;
     padding: 1vw 2vw;
-    background-color: var(--navbar-hover);
+    background-color: var(--navbar-logo);
+}
+
+#active {
+    background-color: var(--navbar-active);
 }
