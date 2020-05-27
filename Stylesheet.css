@@ -9,16 +9,33 @@
     --navbar-hover: #1D1D1D;
     --navbar-active:#1D1D1D;
     --text:         #FFFFFF;
+
+    --background:   #2D2D2D;
+    --d-background: #1D1D1D;
+
+    --transition:   0.5s;
 }
 
 html {
     font-family: 'Noto Sans', sans-serif;
     color: var(--text);
     font-size: 2vw;
+
+    background-color: var(--background);
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    scroll-behavior: smooth;
 }
 
 nav {
     background-color: var(--navbar);
+    font-size: 3vw;
 }
 
 #headerList {
@@ -29,7 +46,7 @@ nav {
     display: inline-flex;
     padding: 1vw;
 
-    transition: 0.5s;
+    transition: var(--transition);
 }
 
 .headerItem:hover {
@@ -49,4 +66,57 @@ nav {
 
 #active {
     background-color: var(--navbar-active);
+}
+
+.parallax {
+    background-image: url("Assets/parallax.jpg");
+    background-color: #cccccc;
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.parallax-content {
+    width: inherit;
+    height: inherit;
+
+    text-align: center;
+
+    background-color: rgba(0, 0, 0, 0);
+
+    padding-top: 19vh;
+}
+
+.container {
+    padding: 5vw 10vw;
+}
+
+.darker {
+    background-color: var(--d-background);
+}
+
+h1 {
+    font-weight: normal;
+}
+
+footer {
+    background-color: var(--navbar-logo);
+    width: 100%;
+    height: 5vw;
+
+    text-align: center;
+}
+
+.top > img {
+    height: 4vw;
+    width: auto;
+
+    transition: all var(--transition) ease-in-out;
+}
+
+.top > img:hover {
+    filter: opacity(0.25);
 }
